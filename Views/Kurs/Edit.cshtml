@@ -1,0 +1,36 @@
+@model KursViewModel
+<h2>Kurs Ekle</h2>
+<hr>
+<div class="row">
+    <div class="col-8">
+        <form asp-controller="Kurs" asp-action="Edit" method="POST">
+            <input type="hidden" asp-for="KursId" />
+            <div class="mb-3">
+                <label asp-for="Baslik" class="form-label">Kurs Adı</label>
+                <input asp-for="Baslik" type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="OgretmenId" class="form-label">Öğretmen</label>
+                <select asp-for="OgretmenId" class="form-select" asp-items="ViewBag.Ogretmenler">
+                    <option value="">Seçiniz</option>
+                </select>
+
+            </div>
+
+            <button type="submit" class="btn btn-secondary">Kaydet</button>
+
+
+        </form>
+    </div>
+
+    <div class="col-4">
+        <hr>
+        <h4>Öğrenciler</h4>
+        <ul class="list-group">
+            @foreach (var item in Model.KursKayitlari)
+            {
+                <li class="list-group">@item.Ogrenci.AdSoyad</li>
+            }
+    </div>
+</div>
