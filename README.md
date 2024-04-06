@@ -1,7 +1,7 @@
-# dotnet core kurs kayıt sistemi
+# dotnet core course registration system
 
-Bu proje, dotnet core ile yazılmış bir kurs kayıt sistemi uygulamasıdır.
+This project is a course registration system application written in dotnet core.
 
-- database olarak sqlite kullanılmıştır.
-- .net core kullanımı öğrenmek için yapılmıştır.
-- MVC Yapısı kullanıldı
+- SQLite was used as database.
+- Made to learn how to use .net core.
+- MVC Structure was used
